@@ -23,3 +23,7 @@ test
 /.build
 /.firebase.conf
 /.sass-cache
+
+CommandPrompt
+GitBash
+StartCMDwithRuby
