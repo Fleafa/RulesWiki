@@ -1,0 +1,110 @@
+// ------------------------------------------------------------
+// APP CSS. Generates the css for this theme.
+// ------------------------------------------------------------
+// Loads in files from wyrmsass.org and bourbon.io. Your
+// custom stuff should go in the bottom.
+// ------------------------------------------------------------
+
+// Variable defaults set by Wyrm
+@import wyrm_core/wy_variables
+// Overwrites specific to this theme
+@import app_variables
+
+// bourbon.io framework
+@import bourbon
+
+// Bourbon.io/neat framework, with some default media queries
+@import wyrm_core/grid_settings
+@import neat
+@import wyrm_core/neat_extra
+
+// Custom reset
+@import wyrm_core/reset
+
+// Wyrm mixins
+@import wyrm_core/mixin
+
+// Web
+@import font-awesome
+@import wyrm_core/font_icon_defaults
+
+// Wyrm core styles used in this theme
+@import wyrm_core/alert
+@import wyrm_core/button
+@import wyrm_core/dropdown
+@import wyrm_core/form
+@import wyrm_core/generic
+@import wyrm_core/table
+@import wyrm_core/type
+
+@import wyrm_addons/elements/tooltip
+@import wyrm_addons/elements/stars
+@import wyrm_addons/redactor/figures
+
+// Theme specific styles
+@import app_layout
+
+//$col-A: #8C6A3B
+//$col-B: #D8B576
+//$col-C: #F1DC92
+//$col-D: #A44202
+//$col-E: #3F1500
+
+$col-A: #C17750
+$col-B: #3B2C2D
+$col-C: #40476D
+$col-D: #F0C0AE
+$col-E: #A46C5E
+
+$col-transwhite: rgba(255,255,255,0.25)
+
+$col-link: $col-E
+$col-hover:  $col-C
+
+section
+	+outer-container
+	margin-bottom: 1em
+	padding: .5em
+	background-color: $col-transwhite
+	aside
+		+span-columns(3)
+		padding: .5em
+		background-color: $col-transwhite
+	article
+		+span-columns(9)
+		padding: .5em
+		background-color: $col-transwhite
+	navbar
+		+span-columns(9)
+		float: left
+	searchbox
+		+span-columns(3)
+		display: block
+		float: right
+
+body
+	background-color: $col-A
+
+a, a:link, a:visited
+	color: $col-link
+	font-weight: 700
+	
+a:hover, .tooltip:hover
+	color: $col-hover
+	
+.tooltip
+	color: $col-link
+	font-weight: 700
+	+user-select(none)
+	
+.tooltip:hover
+	cursor: help
+		
+.nav
+	float: left
+	li
+		display: inline-block
+		float: left
+		padding: .5em
+	.active
+		background-color: $col-B

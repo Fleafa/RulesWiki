@@ -1,0 +1,15 @@
+<navbar>
+<ul class="nav">
+		<li{% if getCurrentUrl() == "/" %} class="active" {% endif %}><a href="/" class="navbutton">Home</a></li>
+		<li{% if getCurrentUrl() == "/ruleset/" %} class="active" {% endif %}><a href="/ruleset/" class="navbutton">Ruleset</a></li>
+	{% set types = getTypes(false) %}
+	{% for type in types %}
+		<!--<li{% if getCurrentUrl() ==  url(type)  %} class="active" {% endif %}><a href="{{ url(type) }}" class="navbutton">{{ type.name }}</a></li> -->
+	{% endfor %}
+</ul>
+</navbar>
+<searchbox>
+<form action="/search-results/" method="get" data-search-index="false">
+ <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
+</form>
+</searchbox>

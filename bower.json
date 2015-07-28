@@ -1,0 +1,27 @@
+{
+  "name": "webhook-theme-ruleswiki",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Fleafa/RulesWiki",
+  "authors": [
+    "Ben Calvert-Lee"
+  ],
+  "description": "A rules wiki theme for Webhook.",
+  "license": "private",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fluidbox": "~1.3.2",
+    "google-code-prettify": "~1.0.1",
+    "highlight": "~7.0.1",
+    "webhook-js": "*",
+    "wyrm": "~0.0.x",
+		"tooltipster": "3.3.0"
+  }
+}
+

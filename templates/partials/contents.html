@@ -1,0 +1,15 @@
+{% set sections = cms.sections %}
+
+<h1>Contents</h1>
+
+<ul>
+{% for sectionlist in sections|sort('sort') %}
+  <li><a href="{{ url(sectionlist) }}">{{ sectionlist.name }}</a>
+			<ul>
+				{% for ruleslist in sectionlist.rules|sort('sort') %}
+				<li>&nbsp;<a class="contentsrule" href="{{ url(ruleslist) }}">{{ ruleslist.name }}</a></li>
+				{% endfor %}
+			</ul>
+		</li>
+{% endfor %}
+</ul>
